@@ -1,14 +1,13 @@
 type Skill = {
-  title: string,
-  icon: string,
-  style?: object
+  title: string;
+  icon: string;
+  style?: object;
 };
 type Testimonial = {
-  quote: string,
-  name: string,
-  job: string
+  quote: string;
+  name: string;
+  job: string;
 };
-
 
 export const skills: Skill[] = [
   {
@@ -49,12 +48,36 @@ export const skills: Skill[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
+    title: "Express",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    title: "Nest",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+  },
+  {
+    title: "Solidity",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg",
+  },
+  {
+    title: "Rust",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+  },
+  {
+    title: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
     title: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
     title: "Firebase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  },
+  {
+    title: "AWS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
   },
   {
     title: "Figma",
