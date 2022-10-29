@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-import {routes} from "@/data/global";
+import { routes } from "@/data/global";
 import useDelayedRender from "use-delayed-render";
 
 export default function MobileNavbar() {
@@ -33,7 +33,9 @@ export default function MobileNavbar() {
   return (
     <nav>
       <div
-        className={`w-full justify-between flex items-center ${isMenuRendered && 'bg-bg'} p-5`}
+        className={`w-full justify-between flex items-center ${
+          isMenuRendered && "bg-bg"
+        } p-5`}
         style={{ zIndex: 101 }}
       >
         <li className="list-none font-bold text-lg">
@@ -63,6 +65,7 @@ export default function MobileNavbar() {
           {routes.map((item, index) => {
             return (
               <li
+                key={index}
                 className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
