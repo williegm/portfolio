@@ -2,15 +2,14 @@ import Footer from "../global/Footer";
 import Head from "next/head";
 import MobileNavbar from "../global/MobileNavbar";
 import Navbar from "../global/Navbar";
-import React, { ReactChildren } from "react";
 
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
       ? "William Grimmette - Web Developer, Blockchain Engineer."
-      : `${currentPage} - williegm.io`
+      : `${currentPage} | William Grimmette`
   }`;
-  console.log(currentPage);
+
   return (
     <div
       className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-white overflow-hidden md:overflow-visible"
@@ -22,19 +21,19 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/static/favicon/apple-touch-icon.png"
+          href="/static/favicon/favicon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/static/favicon/favicon-32x32.png"
+          href="/static/favicon/favicon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/static/favicon/favicon-16x16.png"
+          href="/static/favicon/favicon.png"
         />
         <link rel="manifest" href="/static/favicon/site.webmanifest" />
         <meta name="title" content={pageTitle} />
