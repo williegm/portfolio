@@ -74,7 +74,7 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/luckydeeer",
+          link: "https://github.com/williegm",
           icon: "/static/icons/github-f.svg",
           leavesWebsite: true,
         },
@@ -86,19 +86,19 @@ export const footer: Footer = {
         },
         // {
         //   name: "Twitter",
-        //   link: "https://twitter.com/luckydeeer",
+        //   link: "https://twitter.com/williegm",
         //   icon: "/static/icons/twitter-f.svg",
         //   leavesWebsite: true,
         // },
         // {
         //   name: "Stackoverflow",
-        //   link: "https://stackoverflow.com/luckydeeer",
+        //   link: "https://stackoverflow.com/williegm",
         //   icon: "/static/icons/stackoverflow-f.svg",
         //   leavesWebsite: true,
         // },
         {
           name: "Email",
-          link: "mailto:contact@Williamtw.io",
+          link: "mailto:grimmettewilliam@gmail.com",
           icon: "/static/icons/mail-f.svg",
           leavesWebsite: true,
         },
@@ -106,7 +106,7 @@ export const footer: Footer = {
     },
   ],
   support: {
-    buymeacoffee: "coffee",
+    buymeacoffee: "",
     paypal: "",
     message: "I appreciate your support very much! 💙",
   },

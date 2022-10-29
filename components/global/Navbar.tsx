@@ -10,7 +10,7 @@ function Navbar({ currentPage }) {
           <span className="font-black text-xl flex items-center">
             <img
               className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500"
-              src="/static/logos/logo_no_text.svg"
+              src="/static/logos/logo-wg.png"
               width="60"
             />
             {"William's".split("").map((letter, index) => {
