@@ -7,7 +7,9 @@ type HeadingProps = {
 function Heading({ tag }: HeadingProps) {
   return (
     <div
-      className={`${tag ? "pt-10 pb-4 sm:pt-24 sm:pb-20" : "py-12 sm:py-20"} w-full text-center relative`}
+      className={`${
+        tag ? "pt-10 pb-4 sm:pt-24 sm:pb-20" : "py-12 sm:py-20"
+      } w-full text-center relative`}
     >
       {tag ? (
         <>
@@ -30,9 +32,9 @@ function Heading({ tag }: HeadingProps) {
       )}
       {!tag && (
         <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
-          I've built cool apps and websites using anything from JavaScript to JavaScript
-          (and even JavaScript!). Here are some of my favorite projects over the course
-          of my journey.
+          I've built cool apps and websites using anything from JavaScript to
+          JavaScript (and even JavaScript!). Here are some of my favorite
+          projects over the course of my journey.
         </p>
       )}
     </div>

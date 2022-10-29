@@ -13,9 +13,7 @@ function Projects() {
       </div>
       <div className="grid grid-cols-1 gap-12 md:gap-5 md:grid-cols-3 items-start">
         {projects.slice(0, 3).map((item) => {
-          return (
-            <ProjectCard key={item.id} project={item} />
-          );
+          return <ProjectCard key={item.id} project={item} />;
         })}
       </div>
       <div className="relative w-full mt-2">

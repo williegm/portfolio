@@ -40,11 +40,7 @@ export default function MobileNavbar() {
       >
         <li className="list-none font-bold text-lg">
           <Link href="/">
-            <img
-              className="mr-3"
-              src="/static/logos/logo-wg.png"
-              width="100"
-            />
+            <img className="mr-3" src="/static/logos/logo-wg.png" width="100" />
           </Link>
         </li>
         <button
