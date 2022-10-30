@@ -47,15 +47,12 @@ function Footer() {
           <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
             {footer.support.buymeacoffee !== "" && (
               <div>
-                <a
-                  href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
-                  target="_blank"
-                >
+                <Link href={footer.support.buymeacoffee}>
                   <img
                     src="/static/misc/buy-me-a-coffee.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
+                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity cursor-pointer"
                   />
-                </a>
+                </Link>
               </div>
             )}
             {footer.support.paypal !== "" && (
