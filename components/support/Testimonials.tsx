@@ -18,7 +18,7 @@ function Testimonials() {
   const { isConnected } = useAccount();
   const [value, setValue] = useState("0.01");
 
-  const { config } = usePrepareSendTransaction({
+  const { config, error } = usePrepareSendTransaction({
     request: {
       to: wallet,
       value: value ? utils.parseEther(value) : undefined,
@@ -32,6 +32,15 @@ function Testimonials() {
   });
 
   const handlePayment = (count: number) => {
+    if (error) {
+      Swal.fire({
+        icon: "info",
+        title: "Insufficient fund!",
+        text: "You don't have enough ETH on your wallet.",
+        showConfirmButton: true,
+      });
+      return;
+    }
     setValue(count.toString());
     sendTransaction();
   };
@@ -80,7 +89,7 @@ function Testimonials() {
                           onClick={
                             isConnected ? () => handlePayment(item.count) : show
                           }
-                          disabled={isConnected && !sendTransaction}
+                          disabled={!error && isConnected && !sendTransaction}
                         >
                           {!isLoading ? (
                             <>Buy me ${item.count} ETH</>
@@ -95,9 +104,10 @@ function Testimonials() {
                     <div className="ml-3">Not connected</div>
                   ) : (
                     <>
-                      <div className="ml-3">💙</div>
+                      <div className="ml-3">{error ? "" : "💙"}</div>
                     </>
                   )}
+                  {error && <div>Insufficient balance</div>}
                 </div>
               </div>
               {index === 2 && (
