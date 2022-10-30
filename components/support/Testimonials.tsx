@@ -1,9 +1,40 @@
-import React from "react";
+import { useState } from "react";
 import { ConnectKitButton } from "connectkit";
+import {
+  useAccount,
+  usePrepareSendTransaction,
+  useSendTransaction,
+  useWaitForTransaction,
+} from "wagmi";
+import { utils } from "ethers";
 import SectionTitle from "../global/SectionTitle";
 import { testimonials } from "@/data/content/support";
 
+const wallet = process.env.NEXT_PUBLIC_WALLET_ADDRESS;
+
 function Testimonials() {
+  const { isConnected } = useAccount();
+  const [value, setValue] = useState("0.01");
+
+  const { config } = usePrepareSendTransaction({
+    request: {
+      to: wallet,
+      value: value ? utils.parseEther(value) : undefined,
+    },
+  });
+  console.log(wallet, value, config);
+
+  const { data, sendTransaction } = useSendTransaction(config);
+
+  const { isLoading, isSuccess } = useWaitForTransaction({
+    hash: data?.hash,
+  });
+
+  const handlePayment = (count: number) => {
+    setValue(count.toString());
+    sendTransaction();
+  };
+
   return (
     <div className="flex flex-col text-left max-w-md md:max-w-full w-full m-auto">
       <SectionTitle title="You love my work!" />
@@ -25,21 +56,32 @@ function Testimonials() {
               <p className="text-base italic relative testimonialQuote">
                 "{item.quote}"
               </p>
-              <p className="mt-4 text-xs text-fun-gray">
-                <div className="flex">
+              <div className="mt-4 text-xs text-fun-gray">
+                <div className="flex items-center">
                   <ConnectKitButton.Custom>
-                    {({
-                      isConnected,
-                      show,
-                    }) => {
+                    {({ isConnected, show }) => {
                       return (
-                        <button onClick={show}>Buy me ${item.count} ETH</button>
+                        <button
+                          className="border py-2 px-3 rounded-xl border-fun-pink-light"
+                          onClick={
+                            isConnected ? () => handlePayment(item.count) : show
+                          }
+                          disabled={!sendTransaction}
+                        >
+                          {!isLoading ? <>Buy me ${item.count} ETH</> : <>Sending ...</>}
+                        </button>
                       );
                     }}
                   </ConnectKitButton.Custom>
-                  <div className="ml-3">Not connected</div>
+                  {!isConnected ? (
+                    <div className="ml-3">Not connected</div>
+                  ) : (
+                    <>
+                      <div className="ml-3">💙</div>
+                    </>
+                  )}
                 </div>
-              </p>
+              </div>
               {index === 2 && (
                 <img
                   className="sqD top-[-30px] right-[-15px] w-11"
