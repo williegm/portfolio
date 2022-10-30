@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ConnectKitButton } from "connectkit";
 import {
   useAccount,
@@ -7,6 +7,8 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 import { utils } from "ethers";
+import Swal from "sweetalert2";
+
 import SectionTitle from "../global/SectionTitle";
 import { testimonials } from "@/data/content/support";
 
@@ -22,7 +24,6 @@ function Testimonials() {
       value: value ? utils.parseEther(value) : undefined,
     },
   });
-  console.log(wallet, value, config);
 
   const { data, sendTransaction } = useSendTransaction(config);
 
@@ -34,6 +35,19 @@ function Testimonials() {
     setValue(count.toString());
     sendTransaction();
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Thanks for your support!",
+        text: "William Grimmette",
+        showConfirmButton: false,
+        timer: 5000,
+      });
+    }
+  }, [isSuccess]);
 
   return (
     <div className="flex flex-col text-left max-w-md md:max-w-full w-full m-auto">
@@ -68,7 +82,11 @@ function Testimonials() {
                           }
                           disabled={!sendTransaction}
                         >
-                          {!isLoading ? <>Buy me ${item.count} ETH</> : <>Sending ...</>}
+                          {!isLoading ? (
+                            <>Buy me ${item.count} ETH</>
+                          ) : (
+                            <>Sending ...</>
+                          )}
                         </button>
                       );
                     }}
