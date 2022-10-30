@@ -10,7 +10,7 @@ const client = createClient(
   getDefaultClient({
     appName: "William's Portfolio",
     alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_ID,
-    chains: [chain.goerli],
+    chains: [chain.mainnet],
   })
 );
 
