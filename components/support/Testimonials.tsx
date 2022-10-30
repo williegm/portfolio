@@ -80,7 +80,7 @@ function Testimonials() {
                           onClick={
                             isConnected ? () => handlePayment(item.count) : show
                           }
-                          disabled={!sendTransaction}
+                          disabled={isConnected && !sendTransaction}
                         >
                           {!isLoading ? (
                             <>Buy me ${item.count} ETH</>
