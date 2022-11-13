@@ -1,8 +1,7 @@
-import Heading from "components/designs/Heading";
-import More from "components/designs/More";
+import Heading from "@/components/certificates/Heading";
+import More from "@/components/certificates/More";
 import Page from "components/utility/Page";
-import Projects from "components/designs/Designs";
-import React from "react";
+import Projects from "@/components/certificates/Certificates";
 
 function certificates() {
   return (
