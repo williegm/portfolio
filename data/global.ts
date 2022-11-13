@@ -35,10 +35,10 @@ export const routes: Route[] = [
     title: "Projects",
     path: "/projects",
   },
-  // {
-  //   title: "Designs",
-  //   path: "/designs",
-  // },
+  {
+    title: "Certificates",
+    path: "/certificates",
+  },
 ];
 
 export const footer: Footer = {
@@ -61,11 +61,11 @@ export const footer: Footer = {
           link: "/projects",
           leavesWebsite: false,
         },
-        // {
-        //   name: "Designs",
-        //   link: "/designs",
-        //   leavesWebsite: false,
-        // },
+        {
+          name: "Certificates",
+          link: "/certificates",
+          leavesWebsite: false,
+        },
       ],
     },
     {
@@ -83,18 +83,18 @@ export const footer: Footer = {
           icon: "/static/icons/linkedin-f.svg",
           leavesWebsite: true,
         },
-        // {
-        //   name: "Twitter",
-        //   link: "https://twitter.com/williegm",
-        //   icon: "/static/icons/twitter-f.svg",
-        //   leavesWebsite: true,
-        // },
-        // {
-        //   name: "Stackoverflow",
-        //   link: "https://stackoverflow.com/williegm",
-        //   icon: "/static/icons/stackoverflow-f.svg",
-        //   leavesWebsite: true,
-        // },
+        {
+          name: "Twitter",
+          link: "https://twitter.com/newvillagexyz",
+          icon: "/static/icons/twitter.svg",
+          leavesWebsite: true,
+        },
+        {
+          name: "Stackoverflow",
+          link: "https://stackoverflow.com/users/20263696",
+          icon: "/static/icons/stack-overflow.svg",
+          leavesWebsite: true,
+        },
         {
           name: "Email",
           link: "mailto:grimmettewilliam@gmail.com",
