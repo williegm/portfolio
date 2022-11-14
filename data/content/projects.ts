@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Lazy Leo Club",
-    desc: "A relationship management platform for web 3.0 that connects audiences and creators, empowering ownership of digital assets.",
+    desc: "The LazyLeo Club is an NFT membership community made up of Leos that will make the people who live too busy on Earth a little more lazy.",
     img: "/static/projects/lazyleoclub.png",
     link: "https://www.lazyleoclub.xyz/",
     tags: ["NextJS", "Framer Motion", "Express", "TailwindCSS"],
