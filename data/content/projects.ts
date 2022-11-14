@@ -21,6 +21,22 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    title: "ClubRare",
+    desc: "Trade real-world collectibles and earn huge rewards on the community-owned phygital(physical digital) marketplace",
+    img: "/static/projects/clubrarexyz.png",
+    link: "https://www.clubrare.xyz/",
+    tags: ["NextJS", "TailwindCSS", "Express", "Node"],
+  },
+  {
+    id: 3,
+    title: "Lazy Leo Club",
+    desc: "A relationship management platform for web 3.0 that connects audiences and creators, empowering ownership of digital assets.",
+    img: "/static/projects/lazyleoclub.png",
+    link: "https://www.lazyleoclub.xyz/",
+    tags: ["NextJS", "Framer Motion", "Express", "TailwindCSS"],
+  },
+  {
+    id: 4,
     title: "XSURGE",
     desc: "Harness the true power of defi.",
     img: "/static/projects/xsurge.png",
