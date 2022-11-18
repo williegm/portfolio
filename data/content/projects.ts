@@ -54,6 +54,15 @@ const projects: Project[] = [
     tags: ["JavaScript", "Three.js", "Animation", "Private Repo"],
   },
   {
+    id: 6,
+    title: "KittyKart Autobody - KittyInu",
+    desc: "Bringing creativity, community, entertainment, and humor into the metaverse through the use of blockchain technology.",
+    img: "/static/projects/kitty-autobody.png",
+    link: "https://kittykart.vercel.app/",
+    github: "https://github.com/launchdex/kittykart-autobody-interface",
+    tags: ["NextJS", "Three.js", "Ethers", "Private Repo"],
+  },
+  {
     id: 7,
     title: "TxList",
     desc: "Get the latest 100 DAI transactions on Ethereum mainnet, real time",
