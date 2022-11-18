@@ -44,6 +44,24 @@ const projects: Project[] = [
     github: "https://github.com/launchdex/Xtrader2",
     tags: ["React", "Ethers", "Solidity", "Private Repo"],
   },
+  {
+    id: 5,
+    title: "KittyInu",
+    desc: "Bringing creativity, community, entertainment, and humor into the metaverse through the use of blockchain technology.",
+    img: "/static/projects/kittyinu.png",
+    link: "https://kittyinu.com/",
+    github: "https://github.com/launchdex/kittyinu-website",
+    tags: ["JavaScript", "Three.js", "Animation", "Private Repo"],
+  },
+  {
+    id: 7,
+    title: "TxList",
+    desc: "Get the latest 100 DAI transactions on Ethereum mainnet, real time",
+    img: "/static/projects/txlist.png",
+    link: "https://tx-list.vercel.app/",
+    github: "https://github.com/launchdex/tx-list",
+    tags: ["Ethers", "Event Filter", "NextJS", "Personal"],
+  },
 ];
 
 export const allTags = [];
