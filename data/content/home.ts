@@ -49,7 +49,7 @@ export const skills: Skill[] = [
   },
   {
     title: "Express",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    icon: "/static/tech/express-original.svg",
   },
   {
     title: "Nest",
@@ -61,7 +61,7 @@ export const skills: Skill[] = [
   },
   {
     title: "Rust",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+    icon: "/static/tech/rust-plain.svg",
   },
   {
     title: "Docker",
