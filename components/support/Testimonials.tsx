@@ -61,7 +61,7 @@ function Testimonials() {
   return (
     <div className="flex flex-col text-left max-w-md md:max-w-full w-full m-auto">
       <SectionTitle title="You love my work!" />
-      <div className="max-w-5xl m-auto md:max-h-[200px] grid grid-cols-1 gap-10 md:gap-10 md:grid-cols-3 items-start">
+      <div className="max-w-2xl m-auto md:max-h-[200px] grid grid-cols-1 gap-10 md:gap-10 md:grid-cols-2 items-start">
         {testimonials.map((item, index) => {
           return (
             <div
@@ -77,7 +77,7 @@ function Testimonials() {
                 </>
               )}
               <p className="text-base italic relative testimonialQuote">
-                "{item.quote}"
+                {item.quote}
               </p>
               <div className="mt-4 text-xs text-fun-gray">
                 <div className="flex items-center">
@@ -110,7 +110,7 @@ function Testimonials() {
                   {error && <div>Insufficient balance</div>}
                 </div>
               </div>
-              {index === 2 && (
+              {index === 1 && (
                 <img
                   className="sqD top-[-30px] right-[-15px] w-11"
                   src="/static/doodles/testimonials/squiggle2.svg"
