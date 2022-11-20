@@ -64,6 +64,15 @@ const projects: Project[] = [
   },
   {
     id: 7,
+    title: "Gamer One",
+    desc: "A community platform purpose built for gamers no matter what game you play or stream.",
+    img: "/static/projects/g1.png",
+    link: "https://g1.gg/",
+    github: "",
+    tags: ["React", "TypeScript", "Redux-saga", "Cypress"],
+  },
+  {
+    id: 8,
     title: "TxList",
     desc: "Get the latest 100 DAI transactions on Ethereum mainnet, real time",
     img: "/static/projects/txlist.png",
