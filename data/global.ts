@@ -68,12 +68,12 @@ export const footer: Footer = {
           icon: "/static/icons/github-f.svg",
           leavesWebsite: true,
         },
-        {
-          name: "LinkedIn",
-          link: "https://www.linkedin.com/in/williegrim/",
-          icon: "/static/icons/linkedin-f.svg",
-          leavesWebsite: true,
-        },
+        // {
+        //   name: "LinkedIn",
+        //   link: "https://www.linkedin.com/in/williegrim/",
+        //   icon: "/static/icons/linkedin-f.svg",
+        //   leavesWebsite: true,
+        // },
         {
           name: "Twitter",
           link: "https://twitter.com/newvillagexyz",
